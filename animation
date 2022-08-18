@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #274546;
+        }
+        h2{
+            position: relative;
+            font-size: 14vw;
+            color: #274546;
+            -webkit-text-stroke: 0.3vw #EFEEE4;
+            font-family: sans-serif;
+            text-transform: uppercase;
+        }
+        h2::before{
+            content: attr(data-text);
+            position: absolute;
+           color: #EFEEE4;
+            overflow: hidden;
+            animation: animate 6s linear infinite;
+        
+        }
+        @keyframes animate
+        {
+            0%,10%,100%{
+                width: 0;
+            }
+            70%,90%{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 data-text="CREATIVE...">Creative...</h2>
+</body>
+</html>
